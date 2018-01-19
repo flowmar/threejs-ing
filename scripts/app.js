@@ -109,12 +109,32 @@ var spherical = (function() {
 
   function render() {
     sphere.rotation.y += 0.005;
+    sphere.rotation.x += 0.019;
+    sphere.rotation.z += 0.019;
+
     sphere2.rotation.y += -0.005;
+    sphere2.rotation.x += 0.019;
+    sphere2.rotation.z += -0.019;
+
+    sphere3.rotation.x += 0.019;
     sphere3.rotation.y += 0.005;
+    sphere3.rotation.z += 0.018;
+
+    sphere4.rotation.x += -0.019;
     sphere4.rotation.y += -0.005;
+    sphere4.rotation.z += 0.019;
+
+    sphere5.rotation.x += 0.019;
     sphere5.rotation.y += 0.005;
+    sphere.rotation.z += -0.019;
+
+    sphere6.rotation.x += 0.019;
     sphere6.rotation.y += -0.005;
+    sphere6.rotation.z += 0.019;
+
+    sphere7.rotation.x += 0.019;
     sphere7.rotation.y += 0.005;
+    sphere7.rotation.z += -0.019;
 
     renderer.render(scene, camera);
     requestAnimationFrame(render);
