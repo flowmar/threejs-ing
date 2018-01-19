@@ -36,12 +36,12 @@ var spherical = (function() {
     });
 
     var material2 = new THREE.MeshBasicMaterial({
-      color: "orange",
+      color: "white",
       wireframe: true
     });
 
     var material3 = new THREE.MeshBasicMaterial({
-      color: "yellow",
+      color: "blue",
       wireframe: true
     });
 
@@ -51,7 +51,7 @@ var spherical = (function() {
     });
 
     var material5 = new THREE.MeshBasicMaterial({
-      color: "blue",
+      color: "yellow",
       wireframe: true
     });
 
@@ -61,7 +61,7 @@ var spherical = (function() {
     });
 
     var material7 = new THREE.MeshBasicMaterial({
-      color: "white",
+      color: "black",
       opacity: 0.1,
       wireframe: true
     });
@@ -83,10 +83,10 @@ var spherical = (function() {
     sphere.name = "sphere";
     sphere2.name = "sphere2";
     sphere3.name = "sphere3";
-    sphere4.name = "sphere3";
-    sphere5.name = "sphere3";
-    sphere6.name = "sphere3";
-    sphere7.name = "sphere3";
+    sphere4.name = "sphere4";
+    sphere5.name = "sphere5";
+    sphere6.name = "sphere6";
+    sphere7.name = "sphere7";
 
     scene.add(sphere);
     scene.add(sphere2);
@@ -110,10 +110,10 @@ var spherical = (function() {
   function render() {
     sphere.rotation.y += 0.005;
     sphere.rotation.x += 0.019;
-    sphere.rotation.z += 0.019;
+    sphere.rotation.z += 0.018;
 
     sphere2.rotation.y += -0.005;
-    sphere2.rotation.x += 0.019;
+    sphere2.rotation.x += -0.019;
     sphere2.rotation.z += -0.019;
 
     sphere3.rotation.x += 0.019;
@@ -122,11 +122,11 @@ var spherical = (function() {
 
     sphere4.rotation.x += -0.019;
     sphere4.rotation.y += -0.005;
-    sphere4.rotation.z += 0.019;
+    sphere4.rotation.z += -0.021;
 
     sphere5.rotation.x += 0.019;
     sphere5.rotation.y += 0.005;
-    sphere.rotation.z += -0.019;
+    sphere.rotation.z += -0.021;
 
     sphere6.rotation.x += 0.019;
     sphere6.rotation.y += -0.005;
