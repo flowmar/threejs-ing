@@ -35,17 +35,20 @@ var example = (function() {
 
     var shapeSettings = new THREE.Shape(shapePoints);
 
+    // Must create an extrusionSettings object
     var extrusionSettings = {
-      steps: 15,
-      amount: 50,
-      bevelEnabled: false
+      steps: 100,
+      amount: 100,
+      bevelEnabled: true
     };
 
+    // Create the Extrude geometry instance, passing in the shapeSettings object and the extrusionSettings object
     var shapeGeometry = new THREE.ExtrudeGeometry(
       shapeSettings,
       extrusionSettings
     );
 
+    // Create the new shape mesh, passing in the shapeGeometry and an optional material.
     shape = new THREE.Mesh(shapeGeometry, material);
 
     scene.add(shape);
