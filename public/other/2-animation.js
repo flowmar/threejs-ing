@@ -1,3 +1,7 @@
+var scene,
+   camera,
+   renderer;
+
 function init() {
 
   "use strict";
@@ -16,13 +20,13 @@ function init() {
 var stats = initStats();
 
   // Create a new scene object
-  var scene = new THREE.Scene();
+  scene = new THREE.Scene();
 
   // Createa a new camera
-  var camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 0.1, 1000);
+  camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 0.1, 1000);
 
   // Create a renderer
-var renderer = new THREE.WebGLRenderer();
+  renderer = new THREE.WebGLRenderer();
 // renderer.setClearColor();
 renderer.setClearColor(new THREE.Color(0xEEEEEE, 1.0));
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -147,5 +151,13 @@ renderScene();
 
 }
 
+// Automatically resize the output when the browser size changes
+window.addEventListener('resize', onResize, false);
+
+function onResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+}
 
 window.onload = init;
