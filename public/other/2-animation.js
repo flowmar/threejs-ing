@@ -2,6 +2,7 @@ var scene,
    camera,
    renderer;
 
+
 function init() {
 
   "use strict";
@@ -161,3 +162,4 @@ function onResize() {
 }
 
 window.onload = init;
+
