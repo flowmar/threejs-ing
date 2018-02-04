@@ -100,7 +100,7 @@ var cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
 // Set the the position of the cube
 cube.position.x = -4;
 cube.position.y = 3;
-cube.position.x = 0;
+cube.position.z = 0;
 
 // Let the cube cast shadows
 cube.castShadow = true;
@@ -162,4 +162,3 @@ function onResize() {
 }
 
 window.onload = init;
-
