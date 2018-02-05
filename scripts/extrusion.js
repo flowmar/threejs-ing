@@ -1,5 +1,5 @@
 var example = (function() {
-  "use strict";
+  'use strict';
 
   var scene = new THREE.Scene(),
     renderer = new THREE.WebGLRenderer(),
@@ -9,7 +9,7 @@ var example = (function() {
 
   function initScene() {
     renderer.setSize(window.innerWidth, window.innerHeight);
-    document.getElementById("webgl-container").appendChild(renderer.domElement);
+    document.getElementById('webgl-container').appendChild(renderer.domElement);
 
     scene.add(light);
 

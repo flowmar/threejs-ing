@@ -1,5 +1,5 @@
 var demo = (function() {
-  "use strict";
+  'use strict';
 
   var scene = new THREE.Scene(),
     light,
@@ -14,7 +14,7 @@ var demo = (function() {
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     // Append the domElement created by the renderer to the webgl container
-    document.getElementById("webgl-container").appendChild(renderer.domElement);
+    document.getElementById('webgl-container').appendChild(renderer.domElement);
 
     // Create a new camera
     camera = new THREE.PerspectiveCamera(
@@ -32,7 +32,7 @@ var demo = (function() {
     scene.add(camera);
 
     // When loading textures, make sure that you make the size of the image the same number for both the width and the height, otherwise it will not fit correctly. (ie 16 x 16 or 32 x 32)
-    var texture = THREE.ImageUtils.loadTexture("./../content/fire.jpg"); //lava texture from http://opengameart.org/sites/default/files/fire.jpg
+    var texture = THREE.ImageUtils.loadTexture('./../content/fire.jpg'); //lava texture from http://opengameart.org/sites/default/files/fire.jpg
 
     // Tell Three.js how we are going to be repeating the texture These correspond to the X and Y directions
     texture.wrapS = THREE.RepeatWrapping;
@@ -59,13 +59,13 @@ var demo = (function() {
     plane.position.y = -10;
 
     // Give the plane object a 'name' property, so that you can call it later
-    plane.name = "plane";
+    plane.name = 'plane';
 
     // Add the plane to the screen
     scene.add(plane);
 
     // Create a directional light
-    light = new THREE.DirectionalLight(new THREE.Color("#ffee00"));
+    light = new THREE.DirectionalLight(new THREE.Color('#ffee00'));
     light.position.set(0, 50, 0);
 
     // Add the light to the scene
@@ -100,6 +100,22 @@ var demo = (function() {
 
     renderer.render(scene, camera);
     requestAnimationFrame(render);
+  }
+
+  $('#titleText').one(
+    'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
+    function() {
+      this.addClass('flash');
+    }
+  );
+
+  // Automatically resize the output when the browser size changes
+  window.addEventListener('resize', onResize, false);
+
+  function onResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
   }
 
   window.onload = initScene;

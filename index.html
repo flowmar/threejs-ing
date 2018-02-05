@@ -8,36 +8,57 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="./css/index.css">
 
     <body class="bg-deep-purple darken-4">
-        <header class="jumbotron-fluid text-center text-black display-2 black teal-text font-weight-bold accent-1 animated slideInRight">
-            <p class="animated slideInUp slideInLeft">Three.JS</p>
+        <header class="jumbotron-fluid text-center text-black display-2 black teal-text font-weight-bold accent-1 animated slideInRight"
+            id="title">
+            <p class="animated flash" id="titleText">Three.JS</p>
         </header>
         <hr class="invisible hoverable z-depth-3">
         <main class="black animated slideInUp">
 
             <header class="jumbotron-fluid display-3 text-center font-weight-bold animated slideInDown teal-text dark-grey darken-4">
-                <p class="animated slideInLeft">First Steps</p>
+                <p class="animated flash">First Steps</p>
             </header>
 
 
-            <div class="container-fluid mdb-color-dark p-2 animated slideInRight border border-light p-2">
-                <a href="./public/intro/1-basics.html">
-                    <button class="btn btn-danger animated slideInUp">Basics</button>
+            <div class="container-fluid mdb-color-dark p-2 animated slideInRight border border-light p-2" id="button-area">
+                <a href="./public/intro/1-basics.html" class="view hm-zoomoverlay hm-white-strong">
+                    <button class="btn btn-danger animated slideInUp hm-zoom">Basics</button>
                 </a>
+                <div class="mask">
+
+                </div>
+                <a href="./public/intro/2-geometries.html" class="view overlay hm-stylish-strong">
+                    <li class="btn btn-indigo btn-raised animated slideInDown darken-3">
+                        Geometries
+                    </li>
+                </a>
+                <div class="mask">
+
+                </div>
+                <a href="./public/intro/3-custom-geometries.html" class="view overlay hm-stylish-strong">
+                    <li class="btn btn-indigo btn-raised animated slideInDown darken-3">
+                        Custom Geometries
+                    </li>
+                </a>
+                <div class="mask">
+
+                </div>
             </div>
 
-            <br><br>
+            <br>
+            <br>
             <div class="container-fluid dark-grey border border-light p-2 animated slideInLeft">
                 <ul>
                     <a href="./public/spheres.html">
-                        <li class="btn btn-amber hoverable z-depth-3">
+                        <li class="btn btn-amber z-depth-3">
                             Spheres
                         </li>
                     </a>
                     <a href="./public/triangles.html">
-                        <li class="btn btn-success hoverable z-depth-3">
+                        <li class="btn btn-success z-depth-3">
                             Triangles
                         </li>
                     </a>
@@ -95,7 +116,7 @@
                         </li>
                     </a>
 
-                    <!-- <a href="./public/other/2-animation.html">
+                    <!-- <a href="./public/intro/2-geometries.html">
                         <li class="btn btn-green darken-3">
                             Animation
                         </li>
@@ -113,6 +134,11 @@
             </div>
 
         </main>
+        <br>
+        <br>
+        <footer class="pb-2 text-center text-muted animated flash">
+            &copy; Copyright 2018 Omar Imam, All Rights Reserved.
+        </footer>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"

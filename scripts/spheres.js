@@ -142,6 +142,15 @@ var spherical = (function() {
     stats.update();
   }
 
+// Automatically resize the output when the browser size changes
+window.addEventListener('resize', onResize, false);
+
+function onResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
   window.onload = initScene;
 
   return {

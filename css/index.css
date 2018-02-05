@@ -1,0 +1,11 @@
+a:hover {
+  text-shadow: 0.05rem 0.05rem 0.05rem #eeeeee, 0.05rem 0.05rem 0.45rem #000000;
+
+  -webkit-box-shadow: inset 5px 5px 3px 8px rgba(0, 0, 0, 0.7);
+
+  box-shadow: inset 5px 5px 3px 8px rgba(0, 0, 0, 0.7);
+}
+
+button:hover {
+  border: solid 0.05rem white;
+}
